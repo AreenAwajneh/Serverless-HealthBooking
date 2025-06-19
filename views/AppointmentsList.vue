@@ -74,10 +74,9 @@ export default {
       console.log("appointmentId:", cleanAppointment.appointmentId);
       console.log(" appointmentId (direct):", appointment.appointmentId);
 
-      const url = `https://tlx7wgi46i.execute-api.us-east-2.amazonaws.com/Health/Appointments`;
-      
-      const payload = { appointmentId: cleanAppointment.appointmentId,
-         status: newStatus };
+      const url = `https://tlx7wgi46i.execute-api.us-east-2.amazonaws.com/Health/Appointments/${Appointment.appointmentId}`;
+
+      const payload = { status: newStatus };
 
       fetch(url, {
         method: "PATCH",
